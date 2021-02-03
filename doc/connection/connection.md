@@ -24,7 +24,7 @@
 ## ビルド用PC以外からプログラムや設計書を参照する(読み取り専用)
 * 設計書
   1. 以下URLにアクセス  
-    https://dcinc-edu2020.github.io/intern2020/design/index.html
+    https://dcinc-edu2020.github.io/intern2020/doc/design/index.html
 
 * コード(ベース)
   1. 以下URLにアクセス  
