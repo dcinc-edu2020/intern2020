@@ -3,30 +3,42 @@
 ## ビルド用PCへ接続し、プログラムや設計書を編集する
 1. スタートメニューを開き、「リモートデスクトップ接続」と検索して開く。  
   ![リモートデスクトップ接続](img/remote.png)
-1. チームごとに、以下コンピュータに対して接続し、ユーザー名とパスワードでログインする。
-    |チーム|コンピューター|ユーザー名|パスワード|
-    |-|-|-|-|
-    |A|20.48.93.210|intern1\user1|user1|
-    |B|20.48.93.171|intern2\user2|user2|
-    |C|20.194.232.49:3389|intern3\user3|user3|
-
-1. それぞれ以下をダブルクリックで開き、編集する
-    |編集対象|格納パス|
+1. チームごとに、以下コンピュータに対して接続する。  
+    |チーム|コンピューター|
     |-|-|
-    |プログラム|Z:\xxx|
-    |設計書|Z:\MicroMouse.iproj|
+    |1|20.48.93.210|
+    |2|20.48.93.171|
+    |3|20.194.232.49|
+1. 以下ユーザー名とパスワードでログインする。  
+    |チーム|ユーザー名|パスワード|
+    |-|-|-|
+    |1|intern1\user1|user1|
+    |2|intern2\user2|user2|
+    |3|intern3\user3|user3|
 
+* ここからはチームメンバに画面共有して進めましょう。
+1. デスクトップにある「インターン」のリンクを開く。
+    |格納ファイルフォルダ名|内容|
+    |Z:\|マイクロマウス用プログラム|
+    |Z:\設計書\MicroMouse.iproj|マイクロマウス用プログラムの設計書|
+    |Z:\マイクロマウス開発手順書.pdf|プログラムのビルド手順書|
+
+1.「マイクロマウス開発手順書.pdf」を開く
+
+1. 手順書を参考に、p7まで実施できることを確認し、プログラム開発に入る。
 
 * (参考)PCには以下ツールが入っています。
-  * マイクロマウス用コンパイラ(CS+)
-  * 次世代設計ツール NextDesign (デンソークリエイト製のツール！)
+  * マイクロマウス用コンパイラ(CS+)・・・マイクロマウス用プログラムのコンパイラ
+  * 次世代設計ツール NextDesign (デンソークリエイト製ツール！)・・・設計書のエディタ
 
 ## ビルド用PC以外からプログラムや設計書を参照する(読み取り専用)
 * 設計書
-  1. 以下URLにアクセス  
-    https://dcinc-edu2020.github.io/intern2020/doc/design/index.html
+  * https://dcinc-edu2020.github.io/intern2020/doc/design/index.html
 
-* コード(ベース)
+* ベースコード
+  * https://github.com/dcinc-edu2020/intern2020/tree/master/program
+
+* ベースコード(ブラウザ上でIDEっぽく見る)
   1. 以下URLにアクセス  
     http://xxx
   1. 「Join the Live Share session from the browser (preview)」をクリック  
@@ -36,6 +48,3 @@
     ![Continue as anonymous](img/continue_anonymous.png)
   1. 適宜ユーザ名(Guset UserのままでもOK)を入れてEnterキー
     ![Username](img/user_name.png)
-
-  * (LiveShareが止まった時の予備)以下URLにアクセス  
-    https://github.com/dcinc-edu2020/intern2020/tree/master/program
