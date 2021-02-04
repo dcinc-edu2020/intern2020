@@ -41,7 +41,7 @@
   1. 「Join the Live Share session from the browser (preview)」をクリック  
     ※VisualStudio+LiveShareがインストールしてある人はそちらで開いてもOK  
     ![Join](img/live_share_join.png)
-  1. 画面右下に出る「Continue as anonymous」をクリック
+  1. 画面右下に出る「Continue as anonymous」をクリック  
     ![Continue as anonymous](img/continue_anonymous.png)
-  1. 適宜ユーザ名(Guset UserのままでもOK)を入れてEnterキー
+  1. 適宜ユーザ名(Guset UserのままでもOK)を入れてEnterキー  
     ![Username](img/user_name.png)
