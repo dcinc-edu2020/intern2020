@@ -1,32 +1,37 @@
 /*==============================================================================*/
-/* Init Header File								*/
+/* Switch Driver Header File							*/
 /*==============================================================================*/
-#ifndef _INIT_H
-#define _INIT_H
+#ifndef _SWITCH_DRIVER_H
+#define _SWITCH_DRIVER_H
 
 /*------------------------------------------------------------------------------*/
 /* Include Files								*/
 /*------------------------------------------------------------------------------*/
-#include "common.h"
 #include "iodefine.h"
-#include "motor_driver.h"
-#include "sensor_driver.h"
-#include "buzzer_driver.h"
 
 /*------------------------------------------------------------------------------*/
 /* Function Prototype								*/
 /*------------------------------------------------------------------------------*/
-void init_all(void);		// 全体初期化
-void init_clock(void);		// CPUの動作周波数を設定
-void init_io(void);		// IOポート初期化
-void init_cmt(void);		// CMT初期化
-void init_mtu(void);		// MTU設定
-void init_adc(void);		// AD初期化
+int get_switch_state(int switch_kind);		// スイッチ状態取得
 
 /*------------------------------------------------------------------------------*/
 /* Defines									*/
 /*------------------------------------------------------------------------------*/
-#define IO_OUT	(1)		// PFCのInput/Output レジスタに1を設定すると出力になる
-#define IO_IN	(0)		// PFCのInput/Output レジスタに0を設定すると入力になる
+/* モード選択スイッチ種別 */
+#define MODE_SW_RED	(0)			// 左スイッチ	(赤)
+#define MODE_SW_YELLOW	(1)			// 中央スイッチ	(黄)
+#define MODE_SW_BLUE	(2)			// 右スイッチ	(青)
+
+/* モード選択スイッチ状態 */
+#define SW_LEFT		(PORT3.PIDR.BIT.B1)	// 左スイッチ	(赤)
+#define SW_CENTER	(PORTC.PIDR.BIT.B3)	// 中央スイッチ	(黄)
+#define SW_RIGHT	(PORTC.PIDR.BIT.B2)	// 右スイッチ	(青)
+
+/* スイッチ状態 */
+#define SW_OFF		(1)			// スイッチがOFFの時に取る値
+#define SW_ON		(0)			// スイッチがONの時に取る値
+
+/* スイッチ制御用定義 */
+#define CHATTERING_WAIT	(50)			// チャタリング回避用待ち時間
 
 #endif

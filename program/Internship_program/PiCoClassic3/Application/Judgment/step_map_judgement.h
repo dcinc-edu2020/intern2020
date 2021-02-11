@@ -1,32 +1,34 @@
 /*==============================================================================*/
-/* Init Header File								*/
+/* Step Map Judgemen Header File						*/
 /*==============================================================================*/
-#ifndef _INIT_H
-#define _INIT_H
+#ifndef _STEP_MAP_JUDGEMENT_H
+#define _STEP_MAP_JUDGEMENT_H
 
 /*------------------------------------------------------------------------------*/
 /* Include Files								*/
 /*------------------------------------------------------------------------------*/
-#include "common.h"
-#include "iodefine.h"
-#include "motor_driver.h"
-#include "sensor_driver.h"
-#include "buzzer_driver.h"
+#include "maze_data.h"
 
 /*------------------------------------------------------------------------------*/
 /* Function Prototype								*/
 /*------------------------------------------------------------------------------*/
-void init_all(void);		// 全体初期化
-void init_clock(void);		// CPUの動作周波数を設定
-void init_io(void);		// IOポート初期化
-void init_cmt(void);		// CMT初期化
-void init_mtu(void);		// MTU設定
-void init_adc(void);		// AD初期化
+void create_step_map(void);		// 歩数マップの作成
+void init_step_map(void);		// 歩数マップの初期化
+
+/*------------------------------------------------------------------------------*/
+/* Externs Variable								*/
+/*------------------------------------------------------------------------------*/
+extern unsigned int step_map[MAZESIZE_X][MAZESIZE_Y];		// 歩数マップ用の配列
 
 /*------------------------------------------------------------------------------*/
 /* Defines									*/
 /*------------------------------------------------------------------------------*/
-#define IO_OUT	(1)		// PFCのInput/Output レジスタに1を設定すると出力になる
-#define IO_IN	(0)		// PFCのInput/Output レジスタに0を設定すると入力になる
+/* 真偽値 */
+#define FALSE		(0)	// 偽
+#define TRUE		(1)	// 真
+
+/* 判定情報 */
+#define MASK_SEARCH	(0x01)	// 壁情報とこの値のAND値が０（NO_WALL）なら壁なし
+#define UNDEFINED	(0xff)	// 未定義の場合の値(255)
 
 #endif
