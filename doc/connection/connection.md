@@ -26,8 +26,9 @@
     |格納ファイルフォルダ名|内容|
     |-|-|
     |Z:\Internship_program|マイクロマウス用プログラム|
-    |Z:\設計書\MicroMouse.iproj|マイクロマウス用プログラムの設計書|
+    |Z:\設計書\MicroMouse.iproj|マイクロマウス用プログラムの設計書(Mixinでは無し)|
     |Z:\マイクロマウス開発手順書.pdf|プログラムのビルド手順書|
+    |Z:\迷路走行プログラムの手引き.pdf|開発プログラム作成の手引き書＋ベースプログラムの構造|
 1. 「マイクロマウス開発手順書.pdf」を開く
 1. 手順書を参考に、プログラムのビルドできる(p7まで実施できる)ことを確認し、プログラム開発に入る。
 * (参考)PCには以下ツールが入っています。
@@ -37,13 +38,15 @@
 ## ビルド用PC以外からプログラムや設計書を参照する(読み取り専用)
 * 開発手順書
   * https://github.com/dcinc-edu2020/intern2020/blob/master/doc/build/マイクロマウス開発手順書.pdf
-* 設計書
+* 迷路走行プログラムの手引き
+  * https://github.com/dcinc-edu2020/intern2020/blob/master/doc/build/迷路走行プログラムの手引き.pdf
+* 設計書（※Mixinでは関係なし）
   * https://dcinc-edu2020.github.io/intern2020/doc/design/index.html
 * ベースコード
   * https://github.com/dcinc-edu2020/intern2020/tree/master/program
 * ベースコード(ブラウザ上でIDEっぽく見る)
   1. 以下URLにアクセス  
-    http://xxx
+    https://prod.liveshare.vsengsaas.visualstudio.com/join?9983462D95C53AF9BE08845A463E66D2B9AC
   1. 「Join the Live Share session from the browser (preview)」をクリック  
     ※VisualStudio+LiveShareがインストールしてある人はそちらで開いてもOK  
     ![Join](img/live_share_join.png)
