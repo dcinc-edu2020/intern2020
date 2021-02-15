@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>単体テスト</title>
+    <title>入力項目</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/kendo.common.min.css">
     <link rel="stylesheet" href="../css/kendo.rtl.min.css">
@@ -41,7 +41,10 @@
               <ul class="breadcrumb">
                 <li><a href="../contents/page0.html">MicroMouse</a></li>
                 <li><a href="../contents/page1.html">MicroMouse</a></li>
-                <li class="active">単体テスト</li>
+                <li><a href="../contents/page88.html">単体テスト</a></li>
+                <li><a href="../contents/page89.html">ゴール判定</a></li>
+                <li><a href="../contents/page93.html">テストケース</a></li>
+                <li class="active">入力項目</li>
               </ul>
             </div>
           </div>
@@ -50,92 +53,8 @@
       <div class="content-space"></div>
       <div class="content-area">
         <p class="pagetitle">
-単体テスト        </p>
-        <div class="hlv4">
-          <div class="hlv5">
-            <p class="title">テスト対象&nbsp;</p>
-            <div class="hlv6">
-              <p class="title">1.&nbsp;&nbsp;ゴール判定</p>
-              <div class="hlv7">
-                <p class="title">関数名&nbsp;</p>
-                <p>judge_goal</p>
-              </div>
-              <div class="hlv7">
-                <p class="title">テストケース&nbsp;</p>
-                <div class="table-responsive">
-                  <table style="width: 98%; table-layout: fixed;">
-                    <thead>
-                      <tr>
-                        <th style="padding: 6.66px; width: 40px;" class="columnheader">No.</th>
-                        <th style="padding: 6.66px; width: 8.62068965517241%; word-wrap: break-word;" class="columnheader">テスト内容</th>
-                        <th style="padding: 6.66px; width: 8.62068965517241%; word-wrap: break-word;" class="columnheader">入力値</th>
-                        <th style="padding: 6.66px; width: 12.9310344827586%; word-wrap: break-word;" class="columnheader">期待値</th>
-                        <th style="padding: 6.66px; width: 69.8275862068966%; word-wrap: break-word;" class="columnheader">合否</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td style="padding: 6.66px; width: 40px;" class="rowheader">1. </td>
-                        <td style="padding: 6.66px; width: 8.62068965517241%; word-wrap: break-word;" class="tablecontent">3面壁ありの場合ゴールと判定する</td>
-                        <td style="padding: 6.66px; width: 8.62068965517241%; word-wrap: break-word;" class="tablecontent">is_exist_forward_wall=1<br />is_exist_left_wall=1<br />is_exist_right_wall=1</td>
-                        <td style="padding: 6.66px; width: 12.9310344827586%; word-wrap: break-word;" class="tablecontent">is_goal=1</td>
-                        <td style="padding: 6.66px; width: 69.8275862068966%; word-wrap: break-word;" class="tablecontent">(未設定)</td>
-                      </tr>
-                      <tr>
-                        <td style="padding: 6.66px; width: 40px;" class="rowheader">2. </td>
-                        <td style="padding: 6.66px; width: 8.62068965517241%; word-wrap: break-word;" class="tablecontent">前壁なしの場合ゴールではないと判定する</td>
-                        <td style="padding: 6.66px; width: 8.62068965517241%; word-wrap: break-word;" class="tablecontent">is_exist_forward_wall=0<br />is_exist_left_wall=1<br />is_exist_right_wall=1</td>
-                        <td style="padding: 6.66px; width: 12.9310344827586%; word-wrap: break-word;" class="tablecontent">is_goal=0</td>
-                        <td style="padding: 6.66px; width: 69.8275862068966%; word-wrap: break-word;" class="tablecontent">(未設定)</td>
-                      </tr>
-                      <tr>
-                        <td style="padding: 6.66px; width: 40px;" class="rowheader">3. </td>
-                        <td style="padding: 6.66px; width: 8.62068965517241%; word-wrap: break-word;" class="tablecontent">左壁なしの場合ゴールではないと判定する</td>
-                        <td style="padding: 6.66px; width: 8.62068965517241%; word-wrap: break-word;" class="tablecontent">is_exist_forward_wall=1<br />is_exist_left_wall=0<br />is_exist_right_wall=1</td>
-                        <td style="padding: 6.66px; width: 12.9310344827586%; word-wrap: break-word;" class="tablecontent">is_goal=0</td>
-                        <td style="padding: 6.66px; width: 69.8275862068966%; word-wrap: break-word;" class="tablecontent">(未設定)</td>
-                      </tr>
-                      <tr>
-                        <td style="padding: 6.66px; width: 40px;" class="rowheader">4. </td>
-                        <td style="padding: 6.66px; width: 8.62068965517241%; word-wrap: break-word;" class="tablecontent">右壁なしの場合ゴールではないと判定する</td>
-                        <td style="padding: 6.66px; width: 8.62068965517241%; word-wrap: break-word;" class="tablecontent">is_exist_forward_wall=1<br />is_exist_left_wall=1<br />is_exist_right_wall=0</td>
-                        <td style="padding: 6.66px; width: 12.9310344827586%; word-wrap: break-word;" class="tablecontent">is_goal=0</td>
-                        <td style="padding: 6.66px; width: 69.8275862068966%; word-wrap: break-word;" class="tablecontent">(未設定)</td>
-                      </tr>
-                      <tr>
-                        <td style="padding: 6.66px; width: 40px;" class="rowheader">5. </td>
-                        <td style="padding: 6.66px; width: 8.62068965517241%; word-wrap: break-word;" class="tablecontent">前壁のみありの場合ゴールではないと判定する</td>
-                        <td style="padding: 6.66px; width: 8.62068965517241%; word-wrap: break-word;" class="tablecontent">is_exist_forward_wall=1<br />is_exist_left_wall=0<br />is_exist_right_wall=0</td>
-                        <td style="padding: 6.66px; width: 12.9310344827586%; word-wrap: break-word;" class="tablecontent">is_goal=0</td>
-                        <td style="padding: 6.66px; width: 69.8275862068966%; word-wrap: break-word;" class="tablecontent">(未設定)</td>
-                      </tr>
-                      <tr>
-                        <td style="padding: 6.66px; width: 40px;" class="rowheader">6. </td>
-                        <td style="padding: 6.66px; width: 8.62068965517241%; word-wrap: break-word;" class="tablecontent">左壁のみありの場合ゴールではないと判定する</td>
-                        <td style="padding: 6.66px; width: 8.62068965517241%; word-wrap: break-word;" class="tablecontent">is_exist_forward_wall=0<br />is_exist_left_wall=1<br />is_exist_right_wall=0</td>
-                        <td style="padding: 6.66px; width: 12.9310344827586%; word-wrap: break-word;" class="tablecontent">is_goal=0</td>
-                        <td style="padding: 6.66px; width: 69.8275862068966%; word-wrap: break-word;" class="tablecontent">(未設定)</td>
-                      </tr>
-                      <tr>
-                        <td style="padding: 6.66px; width: 40px;" class="rowheader">7. </td>
-                        <td style="padding: 6.66px; width: 8.62068965517241%; word-wrap: break-word;" class="tablecontent">右壁のみありの場合ゴールではないと判定する</td>
-                        <td style="padding: 6.66px; width: 8.62068965517241%; word-wrap: break-word;" class="tablecontent">is_exist_forward_wall=0<br />is_exist_left_wall=0<br />is_exist_right_wall=1</td>
-                        <td style="padding: 6.66px; width: 12.9310344827586%; word-wrap: break-word;" class="tablecontent">is_goal=0</td>
-                        <td style="padding: 6.66px; width: 69.8275862068966%; word-wrap: break-word;" class="tablecontent">(未設定)</td>
-                      </tr>
-                      <tr>
-                        <td style="padding: 6.66px; width: 40px;" class="rowheader">8. </td>
-                        <td style="padding: 6.66px; width: 8.62068965517241%; word-wrap: break-word;" class="tablecontent">3面壁なしの場合ゴールではないと判定する</td>
-                        <td style="padding: 6.66px; width: 8.62068965517241%; word-wrap: break-word;" class="tablecontent">is_exist_forward_wall=0<br />is_exist_left_wall=0<br />is_exist_right_wall=0</td>
-                        <td style="padding: 6.66px; width: 12.9310344827586%; word-wrap: break-word;" class="tablecontent">is_goal=0</td>
-                        <td style="padding: 6.66px; width: 69.8275862068966%; word-wrap: break-word;" class="tablecontent">(未設定)</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
+入力項目        </p>
+        <div class="hlv7">
         </div>
       </div>
     </div>

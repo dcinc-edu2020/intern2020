@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>DeviceDriver</title>
+    <title>アプリケーション間データ</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/kendo.common.min.css">
     <link rel="stylesheet" href="../css/kendo.rtl.min.css">
@@ -33,8 +33,7 @@
           </div>
           <div class="pull-right">
             <div class="viewmodel-group">
-              <a href="page72.html"><button class="btn btn-primary btn-xs" disable="disable">コンポーネント構成図</button></a>
-              <a href="page72b.html"><button class="btn btn-default btn-xs">詳細</button></a>
+              <a href="page72.html"><button class="btn btn-primary btn-xs" disable="disable">詳細</button></a>
             </div>
           </div>
           <div class="pull-left">
@@ -43,7 +42,7 @@
                 <li><a href="../contents/page0.html">MicroMouse</a></li>
                 <li><a href="../contents/page1.html">MicroMouse</a></li>
                 <li><a href="../contents/page18.html">ソフト構造</a></li>
-                <li class="active">DeviceDriver</li>
+                <li class="active">アプリケーション間データ</li>
               </ul>
             </div>
           </div>
@@ -52,13 +51,201 @@
       <div class="content-space"></div>
       <div class="content-area">
         <p class="pagetitle">
-DeviceDriver        </p>
+アプリケーション間データ        </p>
         <div class="hlv5">
-          <img src="image72.png" class="img-responsive" usemap="#map_1" />
-          <map name="map_1">
-            <area shape="Rect" coords="190,20,310,100" href="page74.html" alt="" target="_self">
-            <area shape="Rect" coords="20,20,140,100" href="page73.html" alt="" target="_self">
-          </map>
+          <div class="hlv6">
+            <p class="title">説明&nbsp;</p>
+            <p>アプリケーションにおいてコンポーネント間で渡される情報</p>
+          </div>
+          <div class="hlv6">
+            <p class="title">データグループ&nbsp;</p>
+            <div class="hlv7">
+              <p class="title">1.&nbsp;&nbsp;認知情報</p>
+              <div class="hlv8">
+                <p class="title">説明&nbsp;</p>
+                <p>認知コンポーネントグループによって変換された外部の情報</p>
+              </div>
+              <div class="hlv8">
+                <p class="title">データ&nbsp;</p>
+                <div class="table-responsive">
+                  <table style="width: 98%; table-layout: fixed;">
+                    <thead>
+                      <tr>
+                        <th style="padding: 6.66px; width: 40px;" class="columnheader">No.</th>
+                        <th style="padding: 6.66px; width: 8.62068965517241%; word-wrap: break-word;" class="columnheader">名前</th>
+                        <th style="padding: 6.66px; width: 14.7413793103448%; word-wrap: break-word;" class="columnheader">説明</th>
+                        <th style="padding: 6.66px; width: 16.7241379310345%; word-wrap: break-word;" class="columnheader">シンボル名</th>
+                        <th style="padding: 6.66px; width: 18.1034482758621%; word-wrap: break-word;" class="columnheader">型への参照</th>
+                        <th style="padding: 6.66px; width: 41.8103448275862%; word-wrap: break-word;" class="columnheader">値域</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="padding: 6.66px; width: 40px;" class="rowheader">1. </td>
+                        <td style="padding: 6.66px; width: 8.62068965517241%; word-wrap: break-word;" class="tablecontent"><a href="page74.html">外界明るさ</a></td>
+                        <td style="padding: 6.66px; width: 14.7413793103448%; word-wrap: break-word;" class="tablecontent">外界の明るさ</td>
+                        <td style="padding: 6.66px; width: 16.7241379310345%; word-wrap: break-word;" class="tablecontent">-</td>
+                        <td style="padding: 6.66px; width: 18.1034482758621%; word-wrap: break-word;" class="tablecontent"><span class="model-reference-item"><img src="../img/30.png" class="model-item-icon"></img><a href="page120.html">float</a></span><br/>
+</td>
+                        <td style="padding: 6.66px; width: 41.8103448275862%; word-wrap: break-word;" class="tablecontent">-</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 6.66px; width: 40px;" class="rowheader">2. </td>
+                        <td style="padding: 6.66px; width: 8.62068965517241%; word-wrap: break-word;" class="tablecontent"><a href="page75.html">ライト点灯要求</a></td>
+                        <td style="padding: 6.66px; width: 14.7413793103448%; word-wrap: break-word;" class="tablecontent">運転手からのライト点灯要求</td>
+                        <td style="padding: 6.66px; width: 16.7241379310345%; word-wrap: break-word;" class="tablecontent">-</td>
+                        <td style="padding: 6.66px; width: 18.1034482758621%; word-wrap: break-word;" class="tablecontent"><span class="model-reference-item"><img src="../img/30.png" class="model-item-icon"></img><a href="page118.html">int</a></span><br/>
+</td>
+                        <td style="padding: 6.66px; width: 41.8103448275862%; word-wrap: break-word;" class="tablecontent">0:消灯、1:強制点灯、2：オート</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 6.66px; width: 40px;" class="rowheader">3. </td>
+                        <td style="padding: 6.66px; width: 8.62068965517241%; word-wrap: break-word;" class="tablecontent"><a href="page76.html">ドライブモード</a></td>
+                        <td style="padding: 6.66px; width: 14.7413793103448%; word-wrap: break-word;" class="tablecontent">運転手からのドライブモード指定</td>
+                        <td style="padding: 6.66px; width: 16.7241379310345%; word-wrap: break-word;" class="tablecontent">-</td>
+                        <td style="padding: 6.66px; width: 18.1034482758621%; word-wrap: break-word;" class="tablecontent"><span class="model-reference-item"><img src="../img/30.png" class="model-item-icon"></img><a href="page118.html">int</a></span><br/>
+</td>
+                        <td style="padding: 6.66px; width: 41.8103448275862%; word-wrap: break-word;" class="tablecontent">-</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 6.66px; width: 40px;" class="rowheader">4. </td>
+                        <td style="padding: 6.66px; width: 8.62068965517241%; word-wrap: break-word;" class="tablecontent"><a href="page77.html">左側物標距離</a></td>
+                        <td style="padding: 6.66px; width: 14.7413793103448%; word-wrap: break-word;" class="tablecontent">左側の物体までの距離</td>
+                        <td style="padding: 6.66px; width: 16.7241379310345%; word-wrap: break-word;" class="tablecontent">leftside_distance</td>
+                        <td style="padding: 6.66px; width: 18.1034482758621%; word-wrap: break-word;" class="tablecontent"><span class="model-reference-item"><img src="../img/30.png" class="model-item-icon"></img><a href="page118.html">int</a></span><br/>
+</td>
+                        <td style="padding: 6.66px; width: 41.8103448275862%; word-wrap: break-word;" class="tablecontent">0&nbsp;～&nbsp;32767</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 6.66px; width: 40px;" class="rowheader">5. </td>
+                        <td style="padding: 6.66px; width: 8.62068965517241%; word-wrap: break-word;" class="tablecontent"><a href="page78.html">右側物標距離</a></td>
+                        <td style="padding: 6.66px; width: 14.7413793103448%; word-wrap: break-word;" class="tablecontent">右側の物体までの距離</td>
+                        <td style="padding: 6.66px; width: 16.7241379310345%; word-wrap: break-word;" class="tablecontent">rightside_dictance</td>
+                        <td style="padding: 6.66px; width: 18.1034482758621%; word-wrap: break-word;" class="tablecontent"><span class="model-reference-item"><img src="../img/30.png" class="model-item-icon"></img><a href="page118.html">int</a></span><br/>
+</td>
+                        <td style="padding: 6.66px; width: 41.8103448275862%; word-wrap: break-word;" class="tablecontent">0&nbsp;～&nbsp;32767</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 6.66px; width: 40px;" class="rowheader">6. </td>
+                        <td style="padding: 6.66px; width: 8.62068965517241%; word-wrap: break-word;" class="tablecontent"><a href="page79.html">左前方物標距離</a></td>
+                        <td style="padding: 6.66px; width: 14.7413793103448%; word-wrap: break-word;" class="tablecontent">前方左側の物体までの距離</td>
+                        <td style="padding: 6.66px; width: 16.7241379310345%; word-wrap: break-word;" class="tablecontent">front_left_distance</td>
+                        <td style="padding: 6.66px; width: 18.1034482758621%; word-wrap: break-word;" class="tablecontent"><span class="model-reference-item"><img src="../img/30.png" class="model-item-icon"></img><a href="page118.html">int</a></span><br/>
+</td>
+                        <td style="padding: 6.66px; width: 41.8103448275862%; word-wrap: break-word;" class="tablecontent">0&nbsp;～&nbsp;32767</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 6.66px; width: 40px;" class="rowheader">7. </td>
+                        <td style="padding: 6.66px; width: 8.62068965517241%; word-wrap: break-word;" class="tablecontent"><a href="page80.html">右前方物標距離</a></td>
+                        <td style="padding: 6.66px; width: 14.7413793103448%; word-wrap: break-word;" class="tablecontent">前方右側の物体までの距離</td>
+                        <td style="padding: 6.66px; width: 16.7241379310345%; word-wrap: break-word;" class="tablecontent">front_right_distance</td>
+                        <td style="padding: 6.66px; width: 18.1034482758621%; word-wrap: break-word;" class="tablecontent"><span class="model-reference-item"><img src="../img/30.png" class="model-item-icon"></img><a href="page118.html">int</a></span><br/>
+</td>
+                        <td style="padding: 6.66px; width: 41.8103448275862%; word-wrap: break-word;" class="tablecontent">0&nbsp;～&nbsp;32767</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="hlv7">
+              <p class="title">2.&nbsp;&nbsp;制御情報</p>
+              <div class="hlv8">
+                <p class="title">説明&nbsp;</p>
+                <p>制御コンポーネントグループに渡すハードウェア制御情報</p>
+              </div>
+              <div class="hlv8">
+                <p class="title">データ&nbsp;</p>
+                <div class="table-responsive">
+                  <table style="width: 98%; table-layout: fixed;">
+                    <thead>
+                      <tr>
+                        <th style="padding: 6.66px; width: 40px;" class="columnheader">No.</th>
+                        <th style="padding: 6.66px; width: 8.62068965517241%; word-wrap: break-word;" class="columnheader">名前</th>
+                        <th style="padding: 6.66px; width: 14.7413793103448%; word-wrap: break-word;" class="columnheader">説明</th>
+                        <th style="padding: 6.66px; width: 16.7241379310345%; word-wrap: break-word;" class="columnheader">シンボル名</th>
+                        <th style="padding: 6.66px; width: 18.1034482758621%; word-wrap: break-word;" class="columnheader">型への参照</th>
+                        <th style="padding: 6.66px; width: 41.8103448275862%; word-wrap: break-word;" class="columnheader">値域</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="padding: 6.66px; width: 40px;" class="rowheader">1. </td>
+                        <td style="padding: 6.66px; width: 8.62068965517241%; word-wrap: break-word;" class="tablecontent"><a href="page82.html">走行モード</a></td>
+                        <td style="padding: 6.66px; width: 14.7413793103448%; word-wrap: break-word;" class="tablecontent">現在の走行モード</td>
+                        <td style="padding: 6.66px; width: 16.7241379310345%; word-wrap: break-word;" class="tablecontent">run_mode</td>
+                        <td style="padding: 6.66px; width: 18.1034482758621%; word-wrap: break-word;" class="tablecontent"><span class="model-reference-item"><img src="../img/30.png" class="model-item-icon"></img><a href="page121.html">RUN_MODE</a></span><br/>
+</td>
+                        <td style="padding: 6.66px; width: 41.8103448275862%; word-wrap: break-word;" class="tablecontent">0：直進<br />1：右折<br />2：左折<br />3：Uターン<br />4：停止</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="hlv7">
+              <p class="title">3.&nbsp;&nbsp;内部情報</p>
+              <div class="hlv8">
+                <p class="title">説明&nbsp;</p>
+                <p>判断コンポーネントグループ内のコンポーネント間で受け渡す情報</p>
+              </div>
+              <div class="hlv8">
+                <p class="title">データ&nbsp;</p>
+                <div class="table-responsive">
+                  <table style="width: 98%; table-layout: fixed;">
+                    <thead>
+                      <tr>
+                        <th style="padding: 6.66px; width: 40px;" class="columnheader">No.</th>
+                        <th style="padding: 6.66px; width: 8.62068965517241%; word-wrap: break-word;" class="columnheader">名前</th>
+                        <th style="padding: 6.66px; width: 14.7413793103448%; word-wrap: break-word;" class="columnheader">説明</th>
+                        <th style="padding: 6.66px; width: 16.7241379310345%; word-wrap: break-word;" class="columnheader">シンボル名</th>
+                        <th style="padding: 6.66px; width: 18.1034482758621%; word-wrap: break-word;" class="columnheader">型への参照</th>
+                        <th style="padding: 6.66px; width: 41.8103448275862%; word-wrap: break-word;" class="columnheader">値域</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="padding: 6.66px; width: 40px;" class="rowheader">1. </td>
+                        <td style="padding: 6.66px; width: 8.62068965517241%; word-wrap: break-word;" class="tablecontent"><a href="page84.html">前壁有無</a></td>
+                        <td style="padding: 6.66px; width: 14.7413793103448%; word-wrap: break-word;" class="tablecontent">前壁有無判断結果</td>
+                        <td style="padding: 6.66px; width: 16.7241379310345%; word-wrap: break-word;" class="tablecontent">existence_front_wall</td>
+                        <td style="padding: 6.66px; width: 18.1034482758621%; word-wrap: break-word;" class="tablecontent"><span class="model-reference-item"><img src="../img/30.png" class="model-item-icon"></img><a href="page118.html">int</a></span><br/>
+</td>
+                        <td style="padding: 6.66px; width: 41.8103448275862%; word-wrap: break-word;" class="tablecontent">0:無,&nbsp;1:有</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 6.66px; width: 40px;" class="rowheader">2. </td>
+                        <td style="padding: 6.66px; width: 8.62068965517241%; word-wrap: break-word;" class="tablecontent"><a href="page85.html">左壁有無</a></td>
+                        <td style="padding: 6.66px; width: 14.7413793103448%; word-wrap: break-word;" class="tablecontent">左壁有無判断結果</td>
+                        <td style="padding: 6.66px; width: 16.7241379310345%; word-wrap: break-word;" class="tablecontent">existence_left_wall</td>
+                        <td style="padding: 6.66px; width: 18.1034482758621%; word-wrap: break-word;" class="tablecontent"><span class="model-reference-item"><img src="../img/30.png" class="model-item-icon"></img><a href="page118.html">int</a></span><br/>
+</td>
+                        <td style="padding: 6.66px; width: 41.8103448275862%; word-wrap: break-word;" class="tablecontent">0:無,&nbsp;1:有</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 6.66px; width: 40px;" class="rowheader">3. </td>
+                        <td style="padding: 6.66px; width: 8.62068965517241%; word-wrap: break-word;" class="tablecontent"><a href="page86.html">右壁有無</a></td>
+                        <td style="padding: 6.66px; width: 14.7413793103448%; word-wrap: break-word;" class="tablecontent">右壁有無判断結果</td>
+                        <td style="padding: 6.66px; width: 16.7241379310345%; word-wrap: break-word;" class="tablecontent">existence_right_wall</td>
+                        <td style="padding: 6.66px; width: 18.1034482758621%; word-wrap: break-word;" class="tablecontent"><span class="model-reference-item"><img src="../img/30.png" class="model-item-icon"></img><a href="page118.html">int</a></span><br/>
+</td>
+                        <td style="padding: 6.66px; width: 41.8103448275862%; word-wrap: break-word;" class="tablecontent">0:無,&nbsp;1:有</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 6.66px; width: 40px;" class="rowheader">4. </td>
+                        <td style="padding: 6.66px; width: 8.62068965517241%; word-wrap: break-word;" class="tablecontent"><a href="page87.html">ゴール判定結果</a></td>
+                        <td style="padding: 6.66px; width: 14.7413793103448%; word-wrap: break-word;" class="tablecontent">ゴール判定結果</td>
+                        <td style="padding: 6.66px; width: 16.7241379310345%; word-wrap: break-word;" class="tablecontent">goal_judgement_result</td>
+                        <td style="padding: 6.66px; width: 18.1034482758621%; word-wrap: break-word;" class="tablecontent"><span class="model-reference-item"><img src="../img/30.png" class="model-item-icon"></img><a href="page118.html">int</a></span><br/>
+</td>
+                        <td style="padding: 6.66px; width: 41.8103448275862%; word-wrap: break-word;" class="tablecontent">0:ゴールしていない,&nbsp;1:ゴール</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

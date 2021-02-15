@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>左前方物標距離</title>
+    <title>走行モード</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/kendo.common.min.css">
     <link rel="stylesheet" href="../css/kendo.rtl.min.css">
@@ -42,9 +42,9 @@
                 <li><a href="../contents/page0.html">MicroMouse</a></li>
                 <li><a href="../contents/page1.html">MicroMouse</a></li>
                 <li><a href="../contents/page18.html">ソフト構造</a></li>
-                <li><a href="../contents/page75.html">アプリケーション間データ</a></li>
-                <li><a href="../contents/page76.html">認知情報</a></li>
-                <li class="active">左前方物標距離</li>
+                <li><a href="../contents/page72.html">アプリケーション間データ</a></li>
+                <li><a href="../contents/page81.html">制御情報</a></li>
+                <li class="active">走行モード</li>
               </ul>
             </div>
           </div>
@@ -53,7 +53,7 @@
       <div class="content-space"></div>
       <div class="content-area">
         <p class="pagetitle">
-左前方物標距離        </p>
+走行モード        </p>
         <div class="hlv7">
           <div class="hlv8 gridhlv">
             <div class="table-responsive">
@@ -61,7 +61,7 @@
                 <tbody>
                   <tr>
                     <td style="padding: 6.66px; width: 15%; word-wrap: break-word;" class="tablecontent cellinfo titleWithGridLine columnheader cellinfo">説明</td>
-                    <td style="padding: 6.66px; width: 75%; word-wrap: break-word;" class="tablecontent cellinfo">前方左側の物体までの距離</td>
+                    <td style="padding: 6.66px; width: 75%; word-wrap: break-word;" class="tablecontent cellinfo">現在の走行モード</td>
                   </tr>
                 </tbody>
               </table>
@@ -73,7 +73,7 @@
                 <tbody>
                   <tr>
                     <td style="padding: 6.66px; width: 15%; word-wrap: break-word;" class="tablecontent cellinfo titleWithGridLine columnheader cellinfo">シンボル名</td>
-                    <td style="padding: 6.66px; width: 75%; word-wrap: break-word;" class="tablecontent cellinfo">forward_left_distance</td>
+                    <td style="padding: 6.66px; width: 75%; word-wrap: break-word;" class="tablecontent cellinfo">run_mode</td>
                   </tr>
                 </tbody>
               </table>
@@ -85,7 +85,7 @@
                 <tbody>
                   <tr>
                     <td style="padding: 6.66px; width: 15%; word-wrap: break-word;" class="tablecontent cellinfo titleWithGridLine columnheader cellinfo">型への参照</td>
-                    <td style="padding: 6.66px; width: 75%; word-wrap: break-word;" class="tablecontent cellinfo"><span class="model-reference-item"><img src="../img/30.png" class="model-item-icon"></img><a href="page124.html">unsigned&nbsp;char</a></span><br/>
+                    <td style="padding: 6.66px; width: 75%; word-wrap: break-word;" class="tablecontent cellinfo"><span class="model-reference-item"><img src="../img/30.png" class="model-item-icon"></img><a href="page121.html">RUN_MODE</a></span><br/>
 </td>
                   </tr>
                 </tbody>
@@ -98,7 +98,7 @@
                 <tbody>
                   <tr>
                     <td style="padding: 6.66px; width: 15%; word-wrap: break-word;" class="tablecontent cellinfo titleWithGridLine columnheader cellinfo">値域</td>
-                    <td style="padding: 6.66px; width: 75%; word-wrap: break-word;" class="tablecontent cellinfo">0&nbsp;～&nbsp;255</td>
+                    <td style="padding: 6.66px; width: 75%; word-wrap: break-word;" class="tablecontent cellinfo">0：直進<br />1：右折<br />2：左折<br />3：Uターン<br />4：停止</td>
                   </tr>
                 </tbody>
               </table>
