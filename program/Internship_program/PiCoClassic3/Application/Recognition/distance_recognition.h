@@ -1,17 +1,20 @@
 /*==============================================================================*/
-/* Common Header File								*/
+/* Distance Recognition Header File						*/
 /*==============================================================================*/
-#ifndef _COMMON_H
-#define _COMMON_H
+#ifndef _DISTANCE_RECOGNITION_H
+#define _DISTANCE_RECOGNITION_H
 
 /*------------------------------------------------------------------------------*/
 /* Global Variable								*/
 /*------------------------------------------------------------------------------*/
-extern volatile unsigned int timer;	// プログラム本体内のタイマー
+extern int rightside_dictance;			// 右側物標距離
+extern int leftside_distance;			// 左側物標距離
+extern int front_right_distance;		// 右前方物標距離
+extern int front_left_distance;		// 左前方物標距離
 
 /*------------------------------------------------------------------------------*/
 /* Function Prototype								*/
 /*------------------------------------------------------------------------------*/
-void wait_ms(int wate_time);		// 待ち時間生成
+void distance_recognition(void);		// 物標距離計測
 
 #endif

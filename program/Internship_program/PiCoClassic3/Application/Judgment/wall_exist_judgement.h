@@ -1,17 +1,21 @@
 /*==============================================================================*/
-/* Common Header File								*/
+/* Wall Exist Judgement Header File						*/
 /*==============================================================================*/
-#ifndef _COMMON_H
-#define _COMMON_H
+#ifndef _WALL_EXIST_JUDGEMENT_H
+#define _WALL_EXIST_JUDGEMENT_H
 
 /*------------------------------------------------------------------------------*/
-/* Global Variable								*/
+/* Defines									*/
 /*------------------------------------------------------------------------------*/
-extern volatile unsigned int timer;	// プログラム本体内のタイマー
+/* 壁有無判定結果 */
+#define	WALL	(0)	// 壁有り
+#define	NO_WALL	(1)	// 壁無し
 
 /*------------------------------------------------------------------------------*/
 /* Function Prototype								*/
 /*------------------------------------------------------------------------------*/
-void wait_ms(int wate_time);		// 待ち時間生成
+int judgement_existence_front_wall(int front_right_distance, int front_left_distance);	// 前壁検知
+int judgement_existence_left_wall(int leftside_distance);				// 左壁検知
+int judgement_existence_right_wall(int rightside_dictance);				// 右壁検知
 
 #endif

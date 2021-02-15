@@ -17,17 +17,10 @@
 *
 *********************************************************************/
 #include <machine.h>
+#include "interrupt.h"
 #include "vect.h"
 
 #pragma section IntPRG
-
-extern 	int_cmt0();
-extern	int_cmt1();
-extern	int_cmt2();
-extern	int_mot_r();
-extern	int_mot_l();
-extern  usb_cpu_usb_int_hand_r();
-extern 	usb_cpu_d0fifo_int_hand();
 
 // Exception(Supervisor Instruction)
 void Excep_SuperVisorInst(void){/* brk(); */}
@@ -84,20 +77,13 @@ void Excep_CMT3_CMI3(void){ }
 void Excep_ETHER_EINT(void){ }
 
 // USB0 D0FIFO0
-void Excep_USB0_D0FIFO0(void){
-	
-	//usb_cpu_d0fifo_int_hand();
-}
+void Excep_USB0_D0FIFO0(void){ }
 
 // USB0 D1FIFO0
 void Excep_USB0_D1FIFO0(void){ }
 
 // USB0 USBI0
-void Excep_USB0_USBI0(void){
-	
-	//usb_cpu_usb_int_hand_r();
-
-}
+void Excep_USB0_USBI0(void){ }
 
 // USB1 D0FIFO1
 void Excep_USB1_D0FIFO1(void){ }

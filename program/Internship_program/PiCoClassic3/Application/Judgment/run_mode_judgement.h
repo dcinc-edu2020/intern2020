@@ -1,12 +1,12 @@
 /*==============================================================================*/
-/* Control Module Header File							*/
+/* Run Mode Judgement Header File						*/
 /*==============================================================================*/
-#ifndef _CONTROL_MODULE_H
-#define _CONTROL_MODULE_H
+#ifndef _RUN_MODE_JUDGEMENT_H
+#define _RUN_MODE_JUDGEMENT_H
 
 /*------------------------------------------------------------------------------*/
 /* Function Prototype								*/
 /*------------------------------------------------------------------------------*/
-void control(void);	// êßå‰
+void judgement_run_mode(int existence_front_wall, int existence_left_wall, int existence_right_wall, int goal_judgement_result); // ëñçsÉÇÅ[ÉhåàíË
 
 #endif

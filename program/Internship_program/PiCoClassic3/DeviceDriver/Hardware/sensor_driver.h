@@ -5,17 +5,32 @@
 #define _SENSOR_DRIVER_H
 
 /*------------------------------------------------------------------------------*/
-/* Include Files								*/
+/* Defines									*/
 /*------------------------------------------------------------------------------*/
-#include "interrupt.h"
+/* センサー種別 */
+#define SENSOR_R	(0)	// 右側物標距離センサー
+#define SENSOR_L	(1)	// 左側物標距離センサー
+#define SENSOR_FR	(2)	// 右前方物標距離センサー
+#define SENSOR_FL	(3)	// 左前方物標距離センサー
 
-/*------------------------------------------------------------------------------*/
-/* Function Prototype								*/
-/*------------------------------------------------------------------------------*/
-void init_sensor(void);			// センサーパラメータ初期化
-int get_distance(int sensor_kind);	// 物標距離取得
-void set_pid_enable(void);		// PID制御有効化設定
-void set_pid_disable(void);		// PID制御無効化設定
+/* センサ関連パラメータ */
+#define WAITLOOP_SLED	300				// LEDを光らせてからAD変換を開始するまでの時間稼ぎ用定数
+
+// マウスD パラメータ
+#define REF_SEN_R	1704				// マウスを迷路中央に置いた時のセンサの値
+#define REF_SEN_L	1728				// マウスを迷路中央に置いた時のセンサの値
+
+#define TH_SEN_R	1660				// 壁があるか否かの閾値
+#define TH_SEN_L	1677				// 壁があるか否かの閾値
+#define TH_SEN_FR	1661				// 壁があるか否かの閾値
+#define TH_SEN_FL	1671				// 壁があるか否かの閾値
+
+#define CONTH_SEN_R	TH_SEN_R			// 制御をかけるか否かの閾値
+#define CONTH_SEN_L	TH_SEN_L			// 制御をかけるか否かの閾値
+#define CON_WALL_KP	(0.3)				// 壁センサによる姿勢制御の比例制御の比例定数
+
+/* 関数マクロ */
+#define CONV_SEN2WALL(w) ((w) ? WALL : NOWALL)		// センサ情報から壁情報へ変換
 
 /*------------------------------------------------------------------------------*/
 /* Type Definitions								*/
@@ -65,31 +80,11 @@ extern t_sensor	sen_fl;		// 左前センサ構造体
 extern t_control	con_wall;	// 制御構造体
 
 /*------------------------------------------------------------------------------*/
-/* Defines									*/
+/* Function Prototype								*/
 /*------------------------------------------------------------------------------*/
-/* センサー種別 */
-#define SENSOR_R	(0)	// 右側物標距離センサー
-#define SENSOR_L	(1)	// 左側物標距離センサー
-#define SENSOR_FR	(2)	// 右前方物標距離センサー
-#define SENSOR_FL	(3)	// 左前方物標距離センサー
-
-/* センサ関連パラメータ */
-#define WAITLOOP_SLED	300				// LEDを光らせてからAD変換を開始するまでの時間稼ぎ用定数
-
-// TeamC パラメータ
-#define REF_SEN_R	925				// マウスを迷路中央に置いた時のセンサの値
-#define REF_SEN_L	685				// マウスを迷路中央に置いた時のセンサの値
-
-#define TH_SEN_R	344				// 壁があるか否かの閾値
-#define TH_SEN_L	268				// 壁があるか否かの閾値
-#define TH_SEN_FR	263				// 壁があるか否かの閾値
-#define TH_SEN_FL	254				// 壁があるか否かの閾値
-
-#define CONTH_SEN_R	TH_SEN_R			// 制御をかけるか否かの閾値
-#define CONTH_SEN_L	TH_SEN_L			// 制御をかけるか否かの閾値
-#define CON_WALL_KP	(0.3)				// 壁センサによる姿勢制御の比例制御の比例定数
-
-/* 関数マクロ */
-#define CONV_SEN2WALL(w) ((w) ? WALL : NOWALL)		// センサ情報から壁情報へ変換
+void init_sensor(void);			// センサーパラメータ初期化
+int get_distance(int sensor_kind);	// 物標距離取得
+void set_pid_enable(void);		// PID制御有効化設定
+void set_pid_disable(void);		// PID制御無効化設定
 
 #endif

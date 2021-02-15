@@ -1,32 +1,31 @@
 /*==============================================================================*/
-/* Control Module C File							*/
+/* Goal Judgement C File							*/
 /*==============================================================================*/
 
 /*------------------------------------------------------------------------------*/
 /* Include Files								*/
 /*------------------------------------------------------------------------------*/
-#include "tire_control.h"
-#include "control_module.h"
+#include "wall_exist_judgement.h"
+#include "goal_judgement.h"
 
 /*------------------------------------------------------------------------------*/
-/* Function Definitions								*/
+/* Function　Definitions							*/
 /*------------------------------------------------------------------------------*/
 
 /*==============================================================================*/
-/* 制御					                                        */
-/*										*/
-/* 指示に従い、ハードウェアドライバを介してハードウェアを制御する		*/
+/* ゴール検知				                                        */
+/* 										*/
+/* 3方の壁の有無から、ゴールを判定する						*/
 /* ---------------------------------------------------------------------------- */
-/*  Arguments:		-						       	*/
-/*  Return   :         	-							*/
+/*  Arguments:		existence_front_Wall	前壁有無		       	*/
+/*  			existence_left_wall	左壁有無			*/
+/*  			existence_right_wall	右壁有無			*/
+/*  Return   :         	goal_judgment_result	ゴール判定結果			*/
+/*			(GOAL / NO_GOAL)				        */
 /*==============================================================================*/
-void control(void)
+int judgement_goal(int existence_front_wall, int existence_left_wall, int existence_right_wall)
 {
-	/* タイヤ制御 */
-	tire_control();
+	int goal_judgement_result = NO_GOAL;	// 初期値は"ゴールでない"に設定
 	
-	/* ヘッドライド制御 */
-	// 未実装
-	
-	return;
+	return goal_judgement_result;
 }

@@ -1,17 +1,19 @@
 /*==============================================================================*/
-/* Common Header File								*/
+/* Goal Judgement Header File							*/
 /*==============================================================================*/
-#ifndef _COMMON_H
-#define _COMMON_H
+#ifndef _GOAL_JUDGEMENT_H
+#define _GOAL_JUDGEMENT_H
 
 /*------------------------------------------------------------------------------*/
-/* Global Variable								*/
+/* Defines									*/
 /*------------------------------------------------------------------------------*/
-extern volatile unsigned int timer;	// プログラム本体内のタイマー
+/* ゴール判定結果 */
+#define	GOAL	(0)	// ゴール
+#define	NO_GOAL	(1)	// ゴールでない
 
 /*------------------------------------------------------------------------------*/
 /* Function Prototype								*/
 /*------------------------------------------------------------------------------*/
-void wait_ms(int wate_time);		// 待ち時間生成
+int judgement_goal(int existence_front_wall, int existence_left_wall, int existence_right_wall);	// ゴール検知
 
 #endif

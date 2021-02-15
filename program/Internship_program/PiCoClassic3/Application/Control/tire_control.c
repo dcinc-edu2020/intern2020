@@ -5,6 +5,10 @@
 /*------------------------------------------------------------------------------*/
 /* Include Files								*/
 /*------------------------------------------------------------------------------*/
+#include "common.h"
+#include "motor_driver.h"
+#include "sensor_driver.h"
+#include "run_mode_judgement.h"
 #include "tire_control.h"
 
 /*------------------------------------------------------------------------------*/
@@ -25,37 +29,32 @@ enum RUN_MODE run_mode = Stop;
 /*  Return   :         	-							*/
 /*==============================================================================*/
 void tire_control(void)
-{	
-	int route_count;
-	
+{			
 	/* 制御処理 */
-	for(route_count = 0; route_count < (MAZESIZE_X * MAZESIZE_Y); route_count++)
+	switch(run_mode)
 	{
-		switch(run_route[route_count])
-		{
-			case Forward:		// 直進制御
-				run_straight(SECTION, DEFAULT_SPEED);		// 1区画直進する
-				break;
-			case TurnRight:		// 右旋回制御
-				run_straight(HALF_SECTION, MIN_SPEED);		// 0.5区画直進する（旋回前に減速する）
-				run_rotate(TURN_RIGHT, TURN_90);		// その場で90度右旋回する
-				run_straight(HALF_SECTION, DEFAULT_SPEED);	// 0.5区画直進する（旋回後に加速する）
-				break;		
-			case TurnLeft:		// 左旋回制御
-				run_straight(HALF_SECTION, MIN_SPEED);		// 0.5区画直進する（旋回前に減速する）
-				run_rotate(TURN_LEFT, TURN_90);			// その場で90度左旋回する
-				run_straight(HALF_SECTION, DEFAULT_SPEED);	// 0.5区画直進する（旋回後に加速する）			
-				break;	
-			case Reverse:		// 反転制御
-				run_straight(HALF_SECTION, MIN_SPEED);		// 0.5区画直進する（旋回前に減速する）
-				run_rotate(TURN_RIGHT, TURN_180);		// その場で180度右旋回する
-				run_straight(HALF_SECTION, DEFAULT_SPEED);	// 0.5区画直進する（旋回後に加速する）
-				break;
-			case Stop:		// 停止制御
-				break;	
-			default:
-				break;
-		}
+		case Forward:		// 直進制御
+			run_straight(SECTION, DEFAULT_SPEED);		// 1区画直進する
+			break;
+		case TurnRight:		// 右旋回制御
+			run_straight(HALF_SECTION, MIN_SPEED);		// 0.5区画直進する（旋回前に減速する）
+			run_rotate(TURN_RIGHT, TURN_90);		// その場で90度右旋回する
+			run_straight(HALF_SECTION, DEFAULT_SPEED);	// 0.5区画直進する（旋回後に加速する）
+			break;		
+		case TurnLeft:		// 左旋回制御
+			run_straight(HALF_SECTION, MIN_SPEED);		// 0.5区画直進する（旋回前に減速する）
+			run_rotate(TURN_LEFT, TURN_90);			// その場で90度左旋回する
+			run_straight(HALF_SECTION, DEFAULT_SPEED);	// 0.5区画直進する（旋回後に加速する）			
+			break;	
+		case Reverse:		// 反転制御
+			run_straight(HALF_SECTION, MIN_SPEED);		// 0.5区画直進する（旋回前に減速する）
+			run_rotate(TURN_RIGHT, TURN_180);		// その場で180度右旋回する
+			run_straight(HALF_SECTION, DEFAULT_SPEED);	// 0.5区画直進する（旋回後に加速する）
+			break;
+		case Stop:		// 停止制御
+			break;	
+		default:
+			break;
 	}
 	
 	return;

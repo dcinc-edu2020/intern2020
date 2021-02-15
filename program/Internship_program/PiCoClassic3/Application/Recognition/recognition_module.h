@@ -1,12 +1,12 @@
 /*==============================================================================*/
-/* Control Module Header File							*/
+/* Recognition Module Header File						*/
 /*==============================================================================*/
-#ifndef _CONTROL_MODULE_H
-#define _CONTROL_MODULE_H
+#ifndef _RECOGNITION_MODULE_H
+#define _RECOGNITION_MODULE_H
 
 /*------------------------------------------------------------------------------*/
 /* Function Prototype								*/
 /*------------------------------------------------------------------------------*/
-void control(void);	// êßå‰
+void recognition(void);			// îFím
 
 #endif

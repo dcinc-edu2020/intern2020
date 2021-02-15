@@ -5,35 +5,6 @@
 #define _TIRE_CONTROL_H
 
 /*------------------------------------------------------------------------------*/
-/* Include Files								*/
-/*------------------------------------------------------------------------------*/
-#include "common.h"
-#include "maze_data.h"
-#include "motor_driver.h"
-#include "sensor_driver.h"
-#include "run_route_judgement.h"
-
-/*------------------------------------------------------------------------------*/
-/* Enum Definitions								*/
-/*------------------------------------------------------------------------------*/
-/* 走行モード */
-enum RUN_MODE{
-	Forward   = 0,	// 前進		北
-	TurnRight = 1,	// 右旋回	東
-	Reverse	  = 2,	// 180度旋回	南
-	TurnLeft  = 3,	// 左旋回	西
-	Stop      = 4	// 停止
-};
-
-/*------------------------------------------------------------------------------*/
-/* Function prototype								*/
-/*------------------------------------------------------------------------------*/
-void tire_control(void);					// タイヤ制御
-void run_straight(int distance, float target_speed);		// タイヤ制御(直進)
-void run_rotate(int rotate_direction, int rotate_angle);	// タイヤ制御(旋回)
-void set_run_mode(enum RUN_MODE set_run_mode);			// 走行モード設定
-
-/*------------------------------------------------------------------------------*/
 /* Defines									*/
 /*------------------------------------------------------------------------------*/
 /* 旋回方向 */
@@ -45,5 +16,25 @@ void set_run_mode(enum RUN_MODE set_run_mode);			// 走行モード設定
 #define SECTION		(180)	// 1区画の距離(mm)
 #define TURN_90		(90)	// ターン角度90度
 #define TURN_180	(180)	// ターン角度180度
+
+/*------------------------------------------------------------------------------*/
+/* Enum Definitions								*/
+/*------------------------------------------------------------------------------*/
+/* 走行モード */
+enum RUN_MODE{
+	Forward   = 0,	// 前進
+	TurnRight = 1,	// 右旋回
+	TurnLeft  = 2,	// 左旋回
+	Reverse	  = 3,	// 180度旋回
+	Stop      = 4	// 停止
+};
+
+/*------------------------------------------------------------------------------*/
+/* Function Prototype								*/
+/*------------------------------------------------------------------------------*/
+void tire_control(void);					// タイヤ制御
+void run_straight(int distance, float target_speed);		// タイヤ制御(直進)
+void run_rotate(int rotate_direction, int rotate_angle);	// タイヤ制御(旋回)
+void set_run_mode(enum RUN_MODE set_run_mode);			// 走行モード設定
 
 #endif

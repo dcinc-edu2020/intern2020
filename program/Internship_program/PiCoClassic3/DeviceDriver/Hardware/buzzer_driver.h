@@ -5,28 +5,10 @@
 #define _BUZZER_DRIVER_H
 
 /*------------------------------------------------------------------------------*/
-/* Include Files								*/
-/*------------------------------------------------------------------------------*/
-#include "iodefine.h"
-#include "common.h"
-
-/*------------------------------------------------------------------------------*/
-/* Function Prototype								*/
-/*------------------------------------------------------------------------------*/
-void set_buzzer_freq(unsigned short frequency);		// ブザー周波数設定
-void buzzer_on(void);					// ブザー発振開始
-void buzzer_off(void);					// ブザー発振停止
-void sound_buzzer(int frequency, int ms_time);		// ブザー吹鳴
-
-/*------------------------------------------------------------------------------*/
 /* Defines									*/
 /*------------------------------------------------------------------------------*/
 /* ブザー */
 #define BUZZER		(PORTB.PODR.BIT.B3)	// ブザー
-
-/* ブザー ON/OFF */
-#define BZ_ON           (1)                     // ブザー ON
-#define BZ_OFF          (0)			// ブザー OFF
 
 /* システム設定周波数 */
 #define INC_FREQ	(2000)			// モードが増加した時に鳴らす音の周波数
@@ -51,5 +33,12 @@ void sound_buzzer(int frequency, int ms_time);		// ブザー吹鳴
 #define BZ_FREQ_LA2     (1760)			// ラ（A）の周波数
 #define BZ_FREQ_SI2     (1976)			// シ（B）の周波数
 #define BZ_FREQ_DO3     (2094)			// ド（C）の周波数
+
+/*------------------------------------------------------------------------------*/
+/* Function Prototype								*/
+/*------------------------------------------------------------------------------*/
+void set_buzzer_freq(unsigned short frequency);		// ブザー周波数設定
+void buzzer_on(void);					// ブザー発振開始
+void buzzer_off(void);					// ブザー発振停止
 
 #endif
