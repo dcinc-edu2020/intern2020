@@ -45,7 +45,7 @@
   * https://github.com/dcinc-edu2020/intern2020/tree/master/program
 * ベースコード(ブラウザ上でIDEっぽく見る)
   1. 以下URLにアクセス  
-    https://prod.liveshare.vsengsaas.visualstudio.com/join?9983462D95C53AF9BE08845A463E66D2B9AC
+    https://prod.liveshare.vsengsaas.visualstudio.com/join?E47C37A10893A572C07BB087B24561D11EE9
   1. 「Join the Live Share session from the browser (preview)」をクリック  
     ※VisualStudio+LiveShareがインストールしてある人はそちらで開いてもOK  
     ![Join](img/live_share_join.png)
